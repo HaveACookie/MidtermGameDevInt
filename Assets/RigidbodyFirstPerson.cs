@@ -14,11 +14,13 @@ public class RigidbodyFirstPerson : MonoBehaviour
 	public bool canGrab; 
 	public Transform pSightStart, pSightEnd;
 	public bool interactCoffeeMaker;
-
+	private RaycastHit hit;
+	public bool cupHit = false;
 	//this variable will remember input and pass it to physics 
 	private Vector3 inputVector;
 	// Update is called once per frame
 	void Update () {
+		Debug.Log(GameManager.Instance.PFindDisable);
 		// MOUSE LOOK!!!
 		// getting mouse input
 		// these are mouse "deltas" (delta = difference)
@@ -66,10 +68,38 @@ public class RigidbodyFirstPerson : MonoBehaviour
 	{
 		
 		GetComponent<Rigidbody>().velocity = inputVector * moveSpeed + Physics.gravity * .5f;
-	}
+	}	
 	
 	void Raycasting () {
-		Debug.DrawLine (pSightStart.position, pSightEnd.position, Color.green);
+		//Define Ray
+		Ray interactRay = new Ray(transform.position, transform.forward);
+		//Define maxraycast distance
+		float maxRaycastDistance = 1f;
+		//Define Raycast hit variable
+		RaycastHit myRayHit = new RaycastHit(); 
+		//Visualize the raycast
+		Debug.DrawRay(interactRay.origin, interactRay.direction * maxRaycastDistance,Color.green);
+		//Shoot Raycast!!
+
+		if (Physics.Raycast(interactRay, out myRayHit, maxRaycastDistance))
+		{
+			if (myRayHit.collider.tag.Equals("Cup"))	
+			{
+				Debug.Log("Cuphit!!");
+				cupHit = true;
+			}
+			else if (!myRayHit.collider.tag.Equals("Cup"))
+			{
+				
+				cupHit = false;
+			}
+			
+			
+		}
+		
+		
+		//grabCast = Physics.Linecast (pSightStart.position, pSightEnd.position, 1<< LayerMask.NameToLayer("Grabbable"));
+		//interactCast = Physics.Linecast (pSightStart.position, pSightEnd.position, 1<< LayerMask.NameToLayer("Coffee"));
 		//interact = Physics2D.Linecast (pSightStart.position, pSightEnd.position, 1<< LayerMask.NameToLayer("Item"));
 
 	}

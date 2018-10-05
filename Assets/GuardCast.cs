@@ -19,29 +19,29 @@ public class GuardCast : MonoBehaviour {
     public AudioSource enemyAudio;
     public GameObject Exclaim;
     // Use this for initialization
-    void Start () {
-		
-	}
+    void Start ()
+    {
+	  
+    }
 
 	// Update is called once per frame
 	void Update () {
 		Raycasting ();
 		gameOver ();
-
-
+		
 	}
 
 	void Raycasting(){
 		Debug.DrawLine (sightStart.position, sightEnd.position, Color.cyan);
-		spotted = Physics2D.Linecast (sightStart.position, sightEnd.position, 1<< LayerMask.NameToLayer("Player"));
+		spotted = Physics.Linecast (sightStart.position, sightEnd.position, 1<< LayerMask.NameToLayer("Player"));
 		Debug.DrawLine (lSideStart.position, LSideEnd.position, Color.magenta);
-		lSpotted = Physics2D.Linecast (lSideStart.position, LSideEnd.position, 1<< LayerMask.NameToLayer("Player"));
+		lSpotted = Physics.Linecast (lSideStart.position, LSideEnd.position, 1<< LayerMask.NameToLayer("Player"));
 		Debug.DrawLine (rSideStart.position, rSideEnd.position, Color.yellow);
-		rSpotted = Physics2D.Linecast (rSideStart.position, rSideEnd.position, 1<< LayerMask.NameToLayer("Player"));
+		rSpotted = Physics.Linecast (rSideStart.position, rSideEnd.position, 1<< LayerMask.NameToLayer("Player"));
 		Debug.DrawLine (lSoftStart.position, lSoftEnd.position, Color.white);
-		lSoftAlert = Physics2D.Linecast (lSoftStart.position, lSoftEnd.position, 1<< LayerMask.NameToLayer("Player"));
+		lSoftAlert = Physics.Linecast (lSoftStart.position, lSoftEnd.position, 1<< LayerMask.NameToLayer("Player"));
 		Debug.DrawLine (rSoftStart.position, rSoftEnd.position, Color.white);
-		rSoftAlert = Physics2D.Linecast (rSoftStart.position, rSoftEnd.position, 1<< LayerMask.NameToLayer("Player"));
+		rSoftAlert = Physics.Linecast (rSoftStart.position, rSoftEnd.position, 1<< LayerMask.NameToLayer("Player"));
 	}
 
 	void gameOver(){
@@ -52,17 +52,25 @@ public class GuardCast : MonoBehaviour {
         if (lSoftAlert || rSoftAlert)
         {
             enemyAudio.PlayOneShot(softAlert);
-            Exclaim.SetActive(true);
+	        GameManager.Instance.PFindDisable = false;
+	       Debug.Log(GameManager.Instance.PFindDisable);
+
+	        //Exclaim.SetActive(true);
         }
         if(!lSoftAlert || !rSoftAlert)
         {
-            Exclaim.SetActive(false);
+	        GameManager.Instance.PFindDisable = true;
+	        Debug.Log(GameManager.Instance.PFindDisable);
+
+	        //Exclaim.SetActive(false);
+
         }
 		if (gameOverz == true) {
 			
 			//WaitForSeconds(3);
-			SceneManager.LoadScene (4);
+			//SceneManager.LoadScene (4);
 		}
+		
 	}
 
 }

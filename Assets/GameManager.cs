@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour {
 
     //Uses Accessors to help implement global accessibility for important variables that must be acccessed accross multiple objects/scripts
     public bool CanGrab { get; set; }
+    public bool PFindDisable { get; set; }
    
 
 	
@@ -33,7 +34,7 @@ public class GameManager : MonoBehaviour {
     {
         _instance = this;
     }
-
+ 
     private void Start()
     {
         
