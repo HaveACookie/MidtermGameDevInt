@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38075437-e554-4b2d-a1fc-b194b8e5c532" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MidTerm_GameDev/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MidTerm_GameDev/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MidTerm_GameDev/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MidTerm_GameDev/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Guard1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Guard1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GuardCast.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GuardCast.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RigidbodyFirstPerson.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RigidbodyFirstPerson.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,12 +24,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="3181" />
+          <entry key="cs" value="3228" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="3181" />
+          <entry key="C#" value="3228" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -97,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/GuardCast.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="39">
-              <caret line="15" column="36" lean-forward="true" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+              <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
               <folding>
                 <marker date="1538766754764" expanded="false" signature="6:113" ph="..." />
                 <marker date="1538766754764" expanded="true" signature="154:2383" ph="{...}" />
@@ -119,24 +110,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Guard1.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="31" column="55" selection-start-line="31" selection-start-column="55" selection-end-line="31" selection-end-column="55" />
+            <state relative-caret-position="375">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
               <folding>
-                <marker date="1538766416295" expanded="false" signature="6:131" ph="..." />
-                <marker date="1538766416295" expanded="true" signature="168:1739" ph="{...}" />
-                <marker date="1538766416295" expanded="true" signature="304:531" ph="{...}" />
-                <marker date="1538766416295" expanded="true" signature="419:480" ph="{...}" />
-                <marker date="1538766416295" expanded="true" signature="548:654" ph="{...}" />
-                <marker date="1538766416295" expanded="true" signature="702:1347" ph="{...}" />
-                <marker date="1538766416295" expanded="true" signature="848:1344" ph="{...}" />
-                <marker date="1538766416295" expanded="true" signature="880:1254" ph="{...}" />
-                <marker date="1538766416295" expanded="true" signature="1038:1225" ph="{...}" />
-                <marker date="1538766416295" expanded="true" signature="1287:1341" ph="{...}" />
-                <marker date="1538766416295" expanded="true" signature="1369:1731" ph="{...}" />
-                <marker date="1538766416295" expanded="true" signature="1522:1675" ph="{...}" />
+                <marker date="1538768076619" expanded="false" signature="6:131" ph="..." />
+                <marker date="1538768076619" expanded="true" signature="168:1739" ph="{...}" />
+                <marker date="1538768076619" expanded="true" signature="304:531" ph="{...}" />
+                <marker date="1538768076619" expanded="true" signature="419:480" ph="{...}" />
+                <marker date="1538768076619" expanded="true" signature="548:654" ph="{...}" />
+                <marker date="1538768076619" expanded="true" signature="702:1347" ph="{...}" />
+                <marker date="1538768076619" expanded="true" signature="848:1344" ph="{...}" />
+                <marker date="1538768076619" expanded="true" signature="880:1254" ph="{...}" />
+                <marker date="1538768076619" expanded="true" signature="1038:1225" ph="{...}" />
+                <marker date="1538768076619" expanded="true" signature="1287:1341" ph="{...}" />
+                <marker date="1538768076619" expanded="true" signature="1369:1731" ph="{...}" />
+                <marker date="1538768076619" expanded="true" signature="1522:1675" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -199,8 +190,8 @@
         <option value="$PROJECT_DIR$/Assets/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/EnemyApproach.cs" />
         <option value="$PROJECT_DIR$/Assets/RigidbodyFirstPerson.cs" />
-        <option value="$PROJECT_DIR$/Assets/Guard1.cs" />
         <option value="$PROJECT_DIR$/Assets/GuardCast.cs" />
+        <option value="$PROJECT_DIR$/Assets/Guard1.cs" />
       </list>
     </option>
   </component>
@@ -211,8 +202,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-138" />
-    <option name="y" value="15" />
+    <option name="x" value="1002" />
+    <option name="y" value="-18" />
     <option name="width" value="1950" />
     <option name="height" value="2175" />
   </component>
@@ -282,12 +273,12 @@
       <workItem from="1538590819578" duration="937000" />
       <workItem from="1538676429769" duration="6000" />
       <workItem from="1538678391298" duration="7132000" />
-      <workItem from="1538763321126" duration="3509000" />
+      <workItem from="1538763321126" duration="4347000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18895000" />
+    <option name="totallyTimeSpent" value="19733000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -299,7 +290,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
+    <frame x="-6" y="-6" width="1549" height="837" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.02414487" />
@@ -407,21 +398,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/liftUp.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
-          <folding>
-            <marker date="1538426863535" expanded="false" signature="6:78" ph="..." />
-            <marker date="1538426863535" expanded="true" signature="115:523" ph="{...}" />
-            <marker date="1538426863535" expanded="true" signature="283:290" ph="{...}" />
-            <marker date="1538426863535" expanded="true" signature="345:355" ph="{...}" />
-            <marker date="1538426863535" expanded="true" signature="397:521" ph="{...}" />
-            <marker date="1538426863535" expanded="true" signature="439:518" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/EnemyApproach.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -452,31 +428,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Guard1.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="31" column="55" selection-start-line="31" selection-start-column="55" selection-end-line="31" selection-end-column="55" />
-          <folding>
-            <marker date="1538766416295" expanded="false" signature="6:131" ph="..." />
-            <marker date="1538766416295" expanded="true" signature="168:1739" ph="{...}" />
-            <marker date="1538766416295" expanded="true" signature="304:531" ph="{...}" />
-            <marker date="1538766416295" expanded="true" signature="419:480" ph="{...}" />
-            <marker date="1538766416295" expanded="true" signature="548:654" ph="{...}" />
-            <marker date="1538766416295" expanded="true" signature="702:1347" ph="{...}" />
-            <marker date="1538766416295" expanded="true" signature="848:1344" ph="{...}" />
-            <marker date="1538766416295" expanded="true" signature="880:1254" ph="{...}" />
-            <marker date="1538766416295" expanded="true" signature="1038:1225" ph="{...}" />
-            <marker date="1538766416295" expanded="true" signature="1287:1341" ph="{...}" />
-            <marker date="1538766416295" expanded="true" signature="1369:1731" ph="{...}" />
-            <marker date="1538766416295" expanded="true" signature="1522:1675" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/GuardCast.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="39">
-          <caret line="15" column="36" lean-forward="true" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
           <folding>
             <marker date="1538766754764" expanded="false" signature="6:113" ph="..." />
             <marker date="1538766754764" expanded="true" signature="154:2383" ph="{...}" />
@@ -489,6 +444,42 @@
             <marker date="1538766754764" expanded="true" signature="2117:2282" ph="{...}" />
             <marker date="1538766754764" expanded="true" signature="2308:2374" ph="{...}" />
             <marker date="1538766754764" expanded="true" signature="2317:2370" ph="/* WaitForSeconds(3); ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/liftUp.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+          <folding>
+            <marker date="1538426863535" expanded="false" signature="6:78" ph="..." />
+            <marker date="1538426863535" expanded="true" signature="115:523" ph="{...}" />
+            <marker date="1538426863535" expanded="true" signature="283:290" ph="{...}" />
+            <marker date="1538426863535" expanded="true" signature="345:355" ph="{...}" />
+            <marker date="1538426863535" expanded="true" signature="397:521" ph="{...}" />
+            <marker date="1538426863535" expanded="true" signature="439:518" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Guard1.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <marker date="1538768076619" expanded="false" signature="6:131" ph="..." />
+            <marker date="1538768076619" expanded="true" signature="168:1739" ph="{...}" />
+            <marker date="1538768076619" expanded="true" signature="304:531" ph="{...}" />
+            <marker date="1538768076619" expanded="true" signature="419:480" ph="{...}" />
+            <marker date="1538768076619" expanded="true" signature="548:654" ph="{...}" />
+            <marker date="1538768076619" expanded="true" signature="702:1347" ph="{...}" />
+            <marker date="1538768076619" expanded="true" signature="848:1344" ph="{...}" />
+            <marker date="1538768076619" expanded="true" signature="880:1254" ph="{...}" />
+            <marker date="1538768076619" expanded="true" signature="1038:1225" ph="{...}" />
+            <marker date="1538768076619" expanded="true" signature="1287:1341" ph="{...}" />
+            <marker date="1538768076619" expanded="true" signature="1369:1731" ph="{...}" />
+            <marker date="1538768076619" expanded="true" signature="1522:1675" ph="{...}" />
           </folding>
         </state>
       </provider>
