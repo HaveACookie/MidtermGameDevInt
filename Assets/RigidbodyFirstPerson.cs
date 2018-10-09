@@ -16,8 +16,13 @@ public class RigidbodyFirstPerson : MonoBehaviour
 	public bool interactCoffeeMaker;
 	private RaycastHit hit;
 	public bool cupHit = false;
+	public AudioClip tryGrab;
+	public AudioSource playerAudio;
 	//this variable will remember input and pass it to physics 
 	private Vector3 inputVector;
+	public GameObject grabbedObject;
+	private Transform tempTrans;
+	public GameObject guideoObject;
 	// Update is called once per frame
 	void Update () {
 		Debug.Log(GameManager.Instance.PFindDisable);
@@ -56,7 +61,20 @@ public class RigidbodyFirstPerson : MonoBehaviour
 
 		if (Input.GetKey(KeyCode.E) && GameManager.Instance.CanGrab == true)
 		{
-			
+					
+			playerAudio.PlayOneShot(tryGrab);
+
+			tempTrans = grabbedObject.transform.parent;
+
+			grabbedObject.transform.parent = guideoObject.transform;
+
+			grabbedObject.transform.position = guideoObject.transform.position;
+
+
+		}
+		else
+		{
+			grabbedObject.transform.parent = null; 
 		}
 		
 		Raycasting();
@@ -87,11 +105,14 @@ public class RigidbodyFirstPerson : MonoBehaviour
 			{
 				Debug.Log("Cuphit!!");
 				cupHit = true;
+				//playerAudio.PlayOneShot(tryGrab);
+				GameManager.Instance.CanGrab = true;
 			}
 			else if (!myRayHit.collider.tag.Equals("Cup"))
 			{
 				
 				cupHit = false;
+				GameManager.Instance.CanGrab = false;
 			}
 			
 			
@@ -103,6 +124,8 @@ public class RigidbodyFirstPerson : MonoBehaviour
 		//interact = Physics2D.Linecast (pSightStart.position, pSightEnd.position, 1<< LayerMask.NameToLayer("Item"));
 
 	}
+	
+	
 
 	private void OnMouseDown()
 	{

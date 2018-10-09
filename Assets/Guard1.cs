@@ -8,7 +8,8 @@ public class Guard1: MonoBehaviour {
 	public float speed = 5;
 	public float waitTime = .3f;
 	public bool shouldMove = true;
-
+	public Transform target;
+	public Transform myTransform;
 
 	public Transform pathHolder;
 
@@ -29,7 +30,18 @@ public class Guard1: MonoBehaviour {
 
 	 void Update()
 	{
-		shouldMove = GameManager.Instance.PFindDisable;
+		//shouldMove = GameManager.Instance.PFindDisable;
+		//if (GameManager.Instance.PFindDisable == false)
+		//{
+		//	shouldMove = true;
+			
+//		}
+
+//		if (GameManager.Instance.PFindDisable == true)
+//		{
+//			shouldMove = false; 
+//		}
+		
 		Debug.Log(GameManager.Instance.PFindDisable);
 	
 	}
@@ -42,7 +54,7 @@ public class Guard1: MonoBehaviour {
 
 		while (true)
 		{
-			if (shouldMove == true) 
+			if (GameManager.Instance.PFindDisable == true) 
 			{
 					transform.position = Vector3.MoveTowards(transform.position, targetWaypoint, speed * Time.deltaTime);
 				if (transform.position == targetWaypoint)
@@ -54,12 +66,14 @@ public class Guard1: MonoBehaviour {
 
 				yield return null;
 			}
-			else if (shouldMove == false)
+			else if (GameManager.Instance.PFindDisable == false)
 			{
 				Debug.Log("Hi");
+				transform.LookAt(target);
+				transform.Translate(Vector3.forward * 5 * Time.deltaTime);
 				yield return null;
 			}
-	}
+		}
 	}
 
 	void OnDrawGizmos(){

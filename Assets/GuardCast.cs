@@ -57,7 +57,7 @@ public class GuardCast : MonoBehaviour {
 
 	        //Exclaim.SetActive(true);
         }
-        if(!lSoftAlert || !rSoftAlert)
+       else if(!lSoftAlert || !rSoftAlert)
         {
 	        GameManager.Instance.PFindDisable = true;
 	        Debug.Log(GameManager.Instance.PFindDisable);
