@@ -16,6 +16,7 @@ public class RigidbodyFirstPerson : MonoBehaviour
 	public bool interactCoffeeMaker;
 	private RaycastHit hit;
 	public bool cupHit = false;
+	public bool coffeeHit = false;
 	public AudioClip tryGrab;
 	public AudioSource playerAudio;
 	//this variable will remember input and pass it to physics 
@@ -23,6 +24,10 @@ public class RigidbodyFirstPerson : MonoBehaviour
 	public GameObject grabbedObject;
 	private Transform tempTrans;
 	public GameObject guideoObject;
+	public bool winTouch = true;
+	public bool hasCoffee = true;
+
+	public bool grabbed = true;
 	// Update is called once per frame
 	void Update () {
 		Debug.Log(GameManager.Instance.PFindDisable);
@@ -61,7 +66,7 @@ public class RigidbodyFirstPerson : MonoBehaviour
 
 		if (Input.GetKey(KeyCode.E) && GameManager.Instance.CanGrab == true)
 		{
-					
+			grabbed = true;		
 			playerAudio.PlayOneShot(tryGrab);
 
 			tempTrans = grabbedObject.transform.parent;
@@ -74,9 +79,24 @@ public class RigidbodyFirstPerson : MonoBehaviour
 		}
 		else
 		{
+			grabbed = false;
 			grabbedObject.transform.parent = null; 
 		}
-		
+
+		if (Input.GetKey(KeyCode.E) && coffeeHit == true && grabbed == true)
+		{
+			hasCoffee = true;
+		}
+
+		if (Input.GetKey(KeyCode.E) && winTouch == true)
+		{
+			if (hasCoffee == true && winTouch == true)
+			{
+				Debug.Log("You Win");
+			}
+			else {Debug.Log("Die in a fire");
+			}
+		}
 		Raycasting();
 
 		
@@ -108,12 +128,32 @@ public class RigidbodyFirstPerson : MonoBehaviour
 				//playerAudio.PlayOneShot(tryGrab);
 				GameManager.Instance.CanGrab = true;
 			}
+			else if (myRayHit.collider.tag.Equals("Kuerig"))
+			{
+				Debug.Log("Coffee Maker");
+				coffeeHit = true;
+				GameManager.Instance.CanGrab = true;
+				
+
+			}
 			else if (!myRayHit.collider.tag.Equals("Cup"))
 			{
 				
 				cupHit = false;
 				GameManager.Instance.CanGrab = false;
 			}
+			else if (!myRayHit.collider.tag.Equals("Kuerig"))
+
+			{
+				coffeeHit = false;
+				GameManager.Instance.CanGrab = false;
+			}
+			else if (myRayHit.collider.tag.Equals("WinObject"))
+			{
+				winTouch = true;
+			}
+
+			
 			
 			
 		}
