@@ -10,13 +10,14 @@ public class Guard1: MonoBehaviour {
 	public bool shouldMove = true;
 	public Transform target;
 	public Transform myTransform;
+	public AudioSource obnoxiousNoise;
 
 	public Transform pathHolder;
 
 	void Start()
 	{
 
-		
+		GameManager.Instance.PFindDisable = true;
 
 
 		Vector3[] waypoints = new Vector3[pathHolder.childCount];
@@ -71,6 +72,8 @@ public class Guard1: MonoBehaviour {
 				Debug.Log("Hi");
 				transform.LookAt(target);
 				transform.Translate(Vector3.forward * 5 * Time.deltaTime);
+				//WaitForSeconds(2);
+				//obnoxiousNoise.Play();
 				yield return null;
 			}
 		}

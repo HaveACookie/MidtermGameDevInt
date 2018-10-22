@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // usage: put this on Capsule with a Rigidbody
 //this script does mouse look and WASD Movement for a player
@@ -24,8 +26,9 @@ public class RigidbodyFirstPerson : MonoBehaviour
 	public GameObject grabbedObject;
 	private Transform tempTrans;
 	public GameObject guideoObject;
-	public bool winTouch = true;
-	public bool hasCoffee = true;
+	public bool winTouch = false;
+
+	public AudioSource memes;
 
 	public bool grabbed = true;
 	// Update is called once per frame
@@ -77,22 +80,26 @@ public class RigidbodyFirstPerson : MonoBehaviour
 
 
 		}
-		else
-		{
-			grabbed = false;
-			grabbedObject.transform.parent = null; 
-		}
+		//else
+		//{
+		//	grabbed = false;
+		//	grabbedObject.transform.parent = null; 
+		//}
 
-		if (Input.GetKey(KeyCode.E) && coffeeHit == true && grabbed == true)
+		if (Input.GetKey(KeyCode.E) && coffeeHit == true)
 		{
-			hasCoffee = true;
+			GameManager.Instance.hasCoffe = true;
+			Debug.Log("want some coffee!");
+			memes.Play();
+
 		}
 
 		if (Input.GetKey(KeyCode.E) && winTouch == true)
 		{
-			if (hasCoffee == true && winTouch == true)
+			if (GameManager.Instance.hasCoffe == true)
 			{
 				Debug.Log("You Win");
+				SceneManager.LoadScene(3);
 			}
 			else {Debug.Log("Die in a fire");
 			}
@@ -121,6 +128,51 @@ public class RigidbodyFirstPerson : MonoBehaviour
 
 		if (Physics.Raycast(interactRay, out myRayHit, maxRaycastDistance))
 		{
+			switch(myRayHit.collider.tag)
+
+			{
+
+				case "Cup":
+				{
+					Debug.Log("Cuphit!!");
+					cupHit = true;
+					//playerAudio.PlayOneShot(tryGrab);
+					GameManager.Instance.CanGrab = true;
+					break;
+				}
+				case "Keurig":
+				{
+					Debug.Log("Coffee Maker");
+					coffeeHit = true;
+					GameManager.Instance.CanGrab = true;
+					break;
+				}
+				case "Winner":
+				{
+					winTouch = true;
+					
+					break;
+				}
+				default:
+				{
+					cupHit = false;
+					coffeeHit = false;
+					winTouch = false;
+					break;
+				}
+					break;
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			/*
 			if (myRayHit.collider.tag.Equals("Cup"))	
 			{
 				Debug.Log("Cuphit!!");
@@ -128,31 +180,29 @@ public class RigidbodyFirstPerson : MonoBehaviour
 				//playerAudio.PlayOneShot(tryGrab);
 				GameManager.Instance.CanGrab = true;
 			}
-			else if (myRayHit.collider.tag.Equals("Kuerig"))
+			
+			if (myRayHit.collider.tag.Equals("Kuerig") && coffeeHit == false)
 			{
 				Debug.Log("Coffee Maker");
 				coffeeHit = true;
 				GameManager.Instance.CanGrab = true;
-				
-
 			}
-			else if (!myRayHit.collider.tag.Equals("Cup"))
+			if (!myRayHit.collider.tag.Equals("Cup"))
 			{
-				
 				cupHit = false;
 				GameManager.Instance.CanGrab = false;
 			}
-			else if (!myRayHit.collider.tag.Equals("Kuerig"))
+			if (!myRayHit.collider.tag.Equals("Kuerig"))
 
 			{
 				coffeeHit = false;
 				GameManager.Instance.CanGrab = false;
 			}
-			else if (myRayHit.collider.tag.Equals("WinObject"))
+			if (myRayHit.collider.tag.Equals("WinObject"))
 			{
 				winTouch = true;
 			}
-
+			*/
 			
 			
 			

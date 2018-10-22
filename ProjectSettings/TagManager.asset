@@ -9,6 +9,8 @@ TagManager:
   - 'Kuerig '
   - WinObject
   - Wall
+  - Keurig
+  - Winner
   layers:
   - Default
   - TransparentFX

@@ -3,12 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CupCollide : MonoBehaviour
 {
 
 	public Slider noiseMeter;
 	public int noiseForMeter;
+	public AudioSource impact;
 
 	// Use this for initialization
 	void Start ()
@@ -30,9 +32,10 @@ public class CupCollide : MonoBehaviour
 			
 		}
 
-		if (GameManager.Instance.Noise == 100)
+		if (GameManager.Instance.Noise == 40)
 		{
 			GameManager.Instance.GameOver = true;
+			SceneManager.LoadScene(2);
 		}
 	}
 
@@ -43,6 +46,7 @@ public class CupCollide : MonoBehaviour
 		{
 			GameManager.Instance.Noise += 10;
 			noiseForMeter = GameManager.Instance.Noise;
+			impact.Play();
 
 		}
 	}

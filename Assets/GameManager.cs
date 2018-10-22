@@ -30,7 +30,7 @@
         public int  Noise { get; set; }
         public bool GameOver { get; set; }
         public bool hasCoffe { get; set; }
-        
+       
         
     
         void Awake()
